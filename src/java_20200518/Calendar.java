@@ -66,10 +66,4 @@ public class Calendar {
 
 		System.out.println(year + "년 " + month + "월 " + day + "일은 " + message + "입니다.");
 	}
-	// OOP화 시켰으므로 main은 불필요
-//	public static void main(String[] args) {
-//		Calendar c = new Calendar();
-//		c.set(2020,5,18);
-//		c.print();
-//	}
 }
