@@ -1,7 +1,7 @@
 package java_20200518;
 
 public class VarArgDemo {
-	public void print(int... a) { // Variable arguments
+	public void print(int... a) { // Variable arguments 꼭 ...을 붙여야 함
 		// a 변수는 배열로 처리함
 		int length = a.length;
 
