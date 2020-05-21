@@ -17,9 +17,9 @@ public class EqualsDemo {
 		Customer c2 = new Customer("안무현","충청남도");
 		
 		System.out.println(c1 == c2);
-		System.out.println(c1.equals(c2));
-		System.out.println(c1.hashCode());
-		System.out.println(c2.hashCode());
+		System.out.println(c1.equals(c2));	// 오버라이딩을 하지 않으면 false 나옴
+		System.out.println(c1.hashCode());	// equals()와 hashCode()의 결과가 같아야 한다
+		System.out.println(c2.hashCode());	// equals()을 오버라이딩 하면 hashCode()도 오버라이딩을 해야 한다
 		
 		// 오버라이딩을 이용한 문자 출력
 		// .toString()은 평소에 생략
