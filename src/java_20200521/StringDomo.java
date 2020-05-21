@@ -13,6 +13,6 @@ public class StringDomo {
 		String s4 = "World";
 		
 		System.out.println(s3 == s4);
-		System.out.println(s3.contentEquals(s4));
+		System.out.println(s3.equals(s4));
 	}
 }
