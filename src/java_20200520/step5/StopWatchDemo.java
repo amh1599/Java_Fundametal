@@ -2,6 +2,7 @@ package java_20200520.step5;
 
 // import 단축키  => Ctrl + Shift + o
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 
 public class StopWatchDemo {
