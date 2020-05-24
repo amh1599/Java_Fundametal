@@ -67,20 +67,18 @@ public class MemberManagementDemo {
 	// 5. 번호를 선택하세요> 메세지를 출력 후 키보드 입력을 받게 한다.
 	public void update() {
 		String updateId = input("아이디>");
+		boolean isUpdate = false;
 		
 		for(Member mem : list) {
 			if(updateId.equals(mem.getId())) {
 				String newName = input("수정할 이름을 입력하세요>");
 				mem.setName(newName);
-				for(Member mem2 : list) {
-					System.out.printf("아이디 : %s , 이름 : %s %n", mem2.getId(), mem2.getName());
-				}
-				print();
-				String inputData = input("번호를 선택하세요>");
-				run(inputData);
+				isUpdate = true;
 			}
 		}
-		System.out.println("수정할 아이디가 없습니다.");
+		if(!isUpdate) {
+			System.out.println("수정할 아이디가 없습니다.");
+		}
 		for(Member mem2 : list) {
 			System.out.printf("아이디 : %s , 이름 : %s %n", mem2.getId(), mem2.getName());
 		}
@@ -97,19 +95,17 @@ public class MemberManagementDemo {
 	// 5. 번호를 선택하세요> 메세지를 출력 후 키보드 입력을 받게 한다.
 	public void delete() {
 		String deleteId = input("아이디>");
+		boolean isDelete = false;
 		
 		for(int i = 0; i < list.size(); i++) {
 			if(deleteId.equals(list.get(i).getId())) {
 				list.remove(i);
-				for(Member mem2 : list) {
-					System.out.printf("아이디 : %s , 이름 : %s %n", mem2.getId(), mem2.getName());
-				}
-				print();
-				String inputData = input("번호를 선택하세요>");
-				run(inputData);
+				isDelete = true;
 			}
 		}
-		System.out.println("삭제할 아이디가 없습니다.");
+		if(!isDelete) {
+			System.out.println("삭제할 아이디가 없습니다.");
+		}
 		for(Member mem2 : list) {
 			System.out.printf("아이디 : %s , 이름 : %s %n", mem2.getId(), mem2.getName());
 		}
@@ -126,19 +122,17 @@ public class MemberManagementDemo {
 	// 5. 번호를 선택하세요> 메세지를 출력 후 키보드 입력을 받게 한다.
 	public void search() {
 		String searchId = input("아이디>");
+		boolean isSearch = false;
 		
 		for(Member mem : list) {
 			if(searchId.equals(mem.getId())) {
 				System.out.printf("검색한 아이디 : %s , 검색된 이름 : %s%n",mem.getId(),mem.getName());
-				for(Member mem2 : list) {
-					System.out.printf("아이디 : %s , 이름 : %s %n", mem2.getId(), mem2.getName());
-				}
-				print();
-				String inputData = input("번호를 선택하세요>");
-				run(inputData);
+				isSearch = true;
 			}
 		}
-		System.out.println("검색된 결과 없습니다.");
+		if(!isSearch) {
+			System.out.println("검색된 결과 없습니다.");
+		}
 		for(Member mem2 : list) {
 			System.out.printf("아이디 : %s , 이름 : %s %n", mem2.getId(), mem2.getName());
 		}
