@@ -77,6 +77,11 @@ public class StringMethodDemo {
 		html.replace("\n", "<br>");
 		System.out.println(html);
 		
+		// String replaceAll(String first, String second) : first 문자열을 second 문자열로 바꿔서 반환
+		String number = "6,900.56".replaceAll(",", "");
+		double d = Double.parseDouble(number);
+		System.out.println(d);
+		
 		
 		// String toUpperCase() : 대문자로 바꿔서 반환
 		String m1 = "hello";
