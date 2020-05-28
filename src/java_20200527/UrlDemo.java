@@ -41,14 +41,14 @@ public class UrlDemo {
 		*/
 		
 		// url이 이미지일때 파일 저장
-		InputStream in = url2.openStream();
-		FileOutputStream fos = new FileOutputStream("c:\\dev\\300.jpg");
+		InputStream in2 = url2.openStream();
+		FileOutputStream fos2 = new FileOutputStream("c:\\dev\\300.jpg");
 		int readByteCount = 0;
 		byte[] readByte = new byte[1024*8];
-		while((readByteCount = in.read(readByte)) != -1) {
-			fos.write(readByte, 0, readByteCount);
+		while((readByteCount = in2.read(readByte)) != -1) {
+			fos2.write(readByte, 0, readByteCount);
 		}
-		in.close();
-		fos.close();
+		in2.close();
+		fos2.close();
 	}
 }
