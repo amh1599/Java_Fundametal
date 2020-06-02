@@ -52,6 +52,6 @@ public class EchoClient {
 	}
 	
 	public static void main(String[] args) {
-		new EchoClient("192.168.0.4",3000).run();	// 현 컴퓨터의 ip
+		new EchoClient("192.168.0.5",3000).run();	// 현 컴퓨터의 ip
 	}
 }
