@@ -1,0 +1,85 @@
+<!--step01_var.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javasvript Variable</title>
+    <script>
+        //숫자를 선언하는 방법
+        var num1 = 9999;
+        var num1 = 1000;    // var은 이중선언 가능
+        console.log(num1);
+
+        // 문자열 선언하는 방법
+        var myName = '안무현';
+        var yourName = "배조스";
+        var multiName = `나는 안무현입니다.
+        너는 누구니?`;     // ES6에서 추가된 문자열 표기법, Enter옆의 ''가 아닌 1옆의 ``으로 표기
+        console.log(multiName);
+
+        var test;
+        //자료형 확인하는 방법
+        console.log(typeof num1);
+        console.log(typeof myName);
+        console.log(typeof test);
+
+        console.log(typeof ourName);    // variable hoisting
+        var ourName = "kpc";
+        console.log(typeof ourName);
+
+        foo();         // function hoisting
+        function foo(){
+            console.log('function foo()');
+        }
+        console.log(typeof foo);
+
+        /////////////////////////////////////////////////////////////////////////
+
+        let a1 = 1000;
+        //let a1 = 2000;  // let은 이중선언 불가
+        console.log(a1);
+
+        //console.log(a2);
+        let a2 = 10;    // vriable hoisting 불가
+
+        var b1 = 10;
+        console.log(b1);//10
+        if(true){
+            var b1 = 20;
+            console.log(b1);//20
+        }
+        console.log(b1);//20
+
+        let c1 = 10;
+        console.log(c1);//10
+        if(true){
+            let c1 = 20;
+            console.log(c1);//20
+        }
+        console.log(c1);//10
+
+        //////////////////////////////////////////////////////////////////////////
+
+        const d1 = 10;
+        //d1 = 30;  // const는 primitive type일때 상수화 시키므로 변경 불과
+
+        const e1 = [1,2];
+        e1.push(3);     // const는 complext type일때 객체의 구성요소가 바뀌는 것은 가능
+        console.log(e1);
+
+
+
+        /*
+            1. primitive type => let
+            2. primitive type 중에서 상수가 필요할 때는 const
+            3. complext type => const
+        */
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

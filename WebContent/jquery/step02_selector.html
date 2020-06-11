@@ -1,0 +1,88 @@
+
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+		
+        $(function(){
+
+                /* select */
+            //$('div').addClass('s');  // element selector
+            //$('#root').addClass('s');   // id selector
+            //$('.third').addClass('s');  // class selector
+            //$('#root > div').addClass('s'); // child selector
+            //$('#root div').addClass('s');   // descendant selector
+            //$('li:nth(2)').addClass('s'); // list의 3번째
+            //$('li:even').addClass('s');   // list에서 짝수(프로그램상 짝수, 실제 보이는건 홀수)
+            //$('li:odd').addClass('s');  // list에서 홀수(프로그램상 홀수, 실제 보이는건 짝수)
+            //$('li:gt(2)').addClass('s');    // list에서 2보다 큰
+            //$('li:first').addClass('s');    // list의 처음
+            //$('li:last').addClass('s');   // list의 마지막
+            $('li:empty').addClass('s');    // list의 empty
+        });
+    </script>
+	<style type="text/css">
+		
+		div, ul, li{
+			border : 2px solid rgb(48, 31, 31);
+			margin : 10px;
+			padding : 10px;
+		}
+		#message { 
+		width:98%;
+  		height:auto;
+  		font-size:20px;
+		
+		padding: 14px 10px; 
+		border: 1px solid #999; 
+		
+		}
+
+
+		#panel ul{
+			list-style : none;
+		}
+		
+		.s{
+			border : 2px solid red;
+			background-color : yellow;
+		}
+		.remov{
+			border : 2px solid black;
+			background-color : white;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="panel">
+        div id="panel"
+		<div id="root">
+			div id="root""
+			<div id="first">
+				div id="first"
+			</div>
+			<div>
+				div
+				<ul>
+					ul
+					<li>li</li>
+					<li>li</li>
+					<li>li</li>
+					<li>li</li>
+					<li>li</li>
+					<li></li>
+				</ul>
+				<div class="third">div class="third sung"</div>
+			</div>
+			<div class="third">div</div>
+			
+		</div>
+	</div>
+	
+	
+</body>
+</html>

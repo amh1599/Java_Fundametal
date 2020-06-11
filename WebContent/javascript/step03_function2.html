@@ -1,0 +1,55 @@
+<!--step03_function2.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <script>
+        // 생성자 함수
+        const Student = function(name, korean, math){
+            this.name = name;
+            this.korean = korean;
+            this.math = math;
+            this.getSum = function(){
+                return this.korean + this.math
+            }
+        }
+        const s1 = new Student('안무현',80,90);
+        console.log(s1.name);
+        console.log(s1.getSum());
+        console.log(typeof s1);
+        console.log(s1);
+    
+        // student object를 확장하기 위해서는 protype으로 확장한다.
+        Student.prototype.getAvg = function(){
+            return (this.korean + this.math)/2;
+        }
+        console.log(s1.getAvg());
+
+        const s2 = {
+            'name' : '안무현',
+            'korean' : 80,
+            'math' : 90,
+            'getSum' : function(){
+                return this.korean + this.math;
+            }
+        }
+        console.log(s2.name);
+        console.log(s2.getSum());
+        console.log(typeof s2);
+        console.log(s2);
+
+        let sObj = "      This is the string        ";
+        String.prototype.trim = function(){
+            return this.replace(/(^\s*)|(\s*$)/gi,"");
+        }
+        let str = sObj.trim();
+        console.log("------"+str+"-------")
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

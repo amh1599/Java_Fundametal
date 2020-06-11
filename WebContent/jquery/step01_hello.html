@@ -1,0 +1,28 @@
+<!--step01_hello.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.5.1.js"></script>
+
+    <script>
+        // window.onload : 두 방법 전부 사용 가능하지만 아래 방법이 더 편하다.
+        $(document).ready(function(){
+            
+        });
+
+        $(function(){
+            $('.welcome').html('<p>hello jquery</p>').css("background-color","yellow");
+        })
+    </script>
+</head>
+<body>
+    <div class="welcome"></div>
+    <div class="welcome"></div>
+</body>
+<script>
+    
+</script>
+</html>

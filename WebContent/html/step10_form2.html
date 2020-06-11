@@ -1,0 +1,64 @@
+<!--step10_form2.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        .container{
+            margin : 10px auto;
+            width : 600px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>회원 가입 폼 요소 작성하기</h3>
+        <form action="save.html" method="get">
+            <label for="id">아이디</label>
+            <input type="text" name="id" id="id" placeholder="아이디를 입력하세요"> <br>
+
+            <label for="age">나이</label>
+            <input type="number" nane="age" id="age" placeholder="나이를 입력하세요"> <br>
+
+            <fieldset>
+                <legend>성별을 선택하세요</legend>
+                <input type="radio" name="gender" id="male" value="mail" checked="checked">
+                <label for="mail">남자</legend>
+                <input type="radio" name="gender" id="female" value="femail">
+                <label for="femail">여자</legend>
+            </fieldset>
+
+            <fieldset>
+                <legend>취미를 선택하세요</legend>
+                <input type="checkbox" name="hobby" id="baseball" value="baseball">
+                <label for="baseball">야구</legend>
+                <input type="checkbox" name="hobby" id="tines" value="tines">
+                <label for="tines">테니스</legend>
+                <input type="checkbox" name="hobby" id="golf" value="golf">
+                <label for="golf">골프</legend>
+            </fieldset>
+
+            <label for="job">직업</label>
+            <select name="job" id="job">
+                <option value="">선택</option>
+                <option value="teacher">선생님</option>
+                <option value="official">공무원</option>
+                <option value="developer">개발자</option>
+            </select> <br>
+
+            <label for="potho">사진</label>
+            <input type="file" name="potho" id="potho"> <br>
+
+            <label for="comment">가입인사</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea> <br>
+
+            <button type="submit"> 회원가입</button>
+            <input type="submit" value="회원가입">
+            <button type="reset"> 취소</button>
+            <input type="reset" value="취소">
+        </form>
+    </div>
+</body>
+</html>

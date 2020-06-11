@@ -1,0 +1,52 @@
+<!--step02_datatype.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Type</title>
+    <script>
+        // 1. number type
+        let num1 = 10;
+        let num2 = 20.1;
+        console.log(typeof num1);
+        console.log(typeof num2);
+
+        // 2. String type
+        let myName = "안무현";
+        let yourName = '손정의';
+        console.log(typeof myName);
+        console.log(typeof yourName);
+
+        // 3. boolean type
+        let isRun = true;
+        let isGreater = 10>5;
+        console.log(typeof isRun);
+        console.log(typeof isGreater);
+
+        let a1 = 10;
+        let a2 = '10';
+        console.log(a1==a2);    // 값비교
+        console.log(a1===a2);   // 값비교 & 자료형 비교
+        
+        // 4. undefined
+        let a3;
+        console.log(typeof a3);
+
+        // 5. array type(object)
+        const names = ['안무현','손정의','배조스'];
+        console.log(typeof names);
+
+        // 6. (plain)object type
+        const obj = {num : 1, name:'안무현', id:'amh1111'};
+        console.log(typeof obj)
+
+        // 7. function
+        const f = function(){       }
+        console.log(typeof f);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
